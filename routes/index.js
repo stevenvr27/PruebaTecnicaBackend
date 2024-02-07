@@ -5,7 +5,11 @@ const router = express.Router();
 
 //Principal route 
 const pokemonController = require("../Controllers/PokemonController");
-
 router.use("/pokemon", pokemonController);
+
+// favorite Pokemons route 
+const favoriteControllerPokemon = require ("../Controllers/favoriteControllerPokemon");
+router.use("/favoritepokemon", favoriteControllerPokemon);
+
 
 module.exports = router;

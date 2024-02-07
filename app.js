@@ -1,4 +1,4 @@
-
+var mongoose= require('mongoose');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/api", indexRouter);
  
-
+mongoose.connect("mongodb+srv://stevenvr2017:Rosi3311@cluster0.xsdkls0.mongodb.net/?retryWrites=true&w=majority");
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
